@@ -1,0 +1,279 @@
+@font-face {
+	font-family: "Rubik-VariableFont";
+	src: url("../assets/font/Rubik-VariableFont_wght.ttf");
+	/* src: url('FileName.eot?#iefix') format('embedded-opentype'),
+     url('FileName.woff') format('woff'),
+     url('FileName.ttf') format('truetype'),
+     url('FileName.svg#FontName') format('svg'); */
+	font-style: normal;
+	font-weight: normal;
+}
+:root {
+	--clr-text-pale-violet: hsl(276, 100%, 81%);
+	--clr-text-moderate-violet: hsl(276, 55%, 52%);
+	--clr-text-desaturated-dark-violet: hsl(271, 15%, 43%);
+	--clr-text-grayish-blue: hsl(206, 6%, 79%);
+	--clr-text-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+	--clr-text-dark-grayish-violet: hsl(270, 7%, 64%);
+	--clr-gradient-light-magenta: hsl(293, 100%, 63%);
+	--clr-gradient-light-violet: hsl(264, 100%, 61%);
+	--clr-secondary-white: hsl(0, 0%, 100%);
+	--clr-secondary-light-grayish-violet: hsl(270, 20%, 96%);
+	--clr-secondary-dark-desaturated-violet: hsl(271, 36%, 24%);
+	--clr-secondary-very-light-magenta: hsl(289, 100%, 72%);
+	--fz-base: 1rem;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-700: 700;
+	--ff-rubik: "Rubik", sans-serif;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+	height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+body {
+	font-family: var(--ff-rubik);
+	font-weight: var(--fw-500);
+	background-color: var(--clr-secondary-light-grayish-violet);
+	display: grid;
+	place-content: center;
+	margin: 0 3rem;
+}
+body::before {
+	--bg-width: 45%;
+	--bg-height: 52%;
+	content: "";
+	width: var(--bg-width);
+	height: var(--bg-height);
+	background-image: linear-gradient(
+		130deg,
+		hsl(293deg 100% 63%) 0%,
+		hsl(290deg 100% 63%) 1%,
+		hsl(286deg 100% 63%) 5%,
+		hsl(283deg 100% 62%) 10%,
+		hsl(280deg 100% 62%) 18%,
+		hsl(277deg 100% 62%) 30%,
+		hsl(274deg 100% 62%) 46%,
+		hsl(270deg 100% 61%) 65%,
+		hsl(267deg 100% 61%) 85%,
+		hsl(264deg 100% 61%) 100%
+	);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-bottom-right-radius: 17rem;
+}
+body::after {
+	--bg-width: 45%;
+	--bg-height: 50%;
+	content: "";
+	width: var(--bg-width);
+	height: var(--bg-height);
+	background-image: linear-gradient(
+		130deg,
+		hsl(293deg 100% 63%) 0%,
+		hsl(290deg 100% 63%) 1%,
+		hsl(286deg 100% 63%) 5%,
+		hsl(283deg 100% 62%) 10%,
+		hsl(280deg 100% 62%) 18%,
+		hsl(277deg 100% 62%) 30%,
+		hsl(274deg 100% 62%) 46%,
+		hsl(270deg 100% 61%) 65%,
+		hsl(267deg 100% 61%) 85%,
+		hsl(264deg 100% 61%) 100%
+	);
+	opacity: 0.1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-top-left-radius: 17rem;
+}
+.app {
+  display: grid;
+  grid-template-rows: 2.3fr 1fr;
+  align-items: center;
+}
+.app-preview {
+	width: 15rem;
+	height: 28rem;
+	margin: 0 auto;
+	background-color: var(--clr-secondary-white);
+  border-radius: 2rem;
+}
+.app-description {
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+}
+.app-description__title {
+  color: var(--clr-text-very-dark-desaturated-violet);
+  font-size: 2.2rem;
+  font-weight: var(--fw-700);
+  line-height: 1.6;
+}
+.app-description__content {
+  color: var(--clr-text-dark-grayish-violet);
+  font-size: 15px;
+  font-weight: var(--fw-500);
+  line-height: 1.6;
+}
+.flex-group {
+  display: flex;
+}
+.flex-group-header {
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.content {
+  font-size: .625rem;
+}
+.app-view {
+  padding: .4rem;
+}
+.head {
+  position: relative;
+  display: block;
+  height: 4.0625rem;
+  background-image: linear-gradient(
+  270deg,
+  hsl(293deg 100% 63%) 0%,
+  hsl(290deg 100% 63%) 7%,
+  hsl(287deg 100% 63%) 14%,
+  hsl(284deg 100% 62%) 22%,
+  hsl(281deg 100% 62%) 31%,
+  hsl(279deg 100% 62%) 40%,
+  hsl(276deg 100% 62%) 51%,
+  hsl(273deg 100% 62%) 63%,
+  hsl(270deg 100% 61%) 76%,
+  hsl(267deg 100% 61%) 89%,
+  hsl(264deg 100% 61%) 100%
+);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.head::before {
+  content: '';
+  width: 8.125rem;
+  height: 1rem;
+  background-color: aliceblue;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: calc((15rem - 8.125rem) / 2.1);
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.icon-er {
+  margin-top: 1rem;
+  margin-left: .5rem;
+  display: inline-flex;
+}
+.icon-er[data-icon="arrow"]::before {
+  content: '';
+  background-image: url(../assets/icon/arrow.png);
+  object-fit: contain;
+  background-blend-mode: screen;
+  width: 15px;
+  height: 15px;
+}
+.icon-burg {
+  margin-top: 1rem;
+  margin-right: .5rem;
+  display: inline-flex;
+}
+.icon-burg[data-icon="burger"]::before {
+  content: '';
+  background-image: url(../assets/icon/burg.png);
+  object-fit: contain;
+  width: 15px;
+  height: 15px;
+}
+.user-icon {
+  --image-thumb: 1.7rem;
+  width: var(--image-thumb);
+  height: var(--image-thumb);
+  border: 1px solid var(--clr-secondary-white);
+  border-radius: 5rem;
+  margin-top: 1rem;
+  margin-right: .1rem;
+}
+.user-icon > img {
+  /* display: block; */
+  border: none;
+  border-radius: 5rem;
+}
+.user-info {
+  flex-basis: 65%;
+  color: var(--clr-secondary-white);
+  margin-top: 1rem;
+}
+.user-info-name {
+  font-size: .9rem;
+  line-height: 1.2;
+}
+.user-info-status {
+  display: block;
+  font-size: .6rem;
+  line-height: 1;
+}
